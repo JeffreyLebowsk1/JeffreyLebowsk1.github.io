@@ -3,13 +3,13 @@ layout: default
 title: Gallery
 ---
 
-# Gallery
+<h1>Gallery</h1>
 
 {% for album in site.data.gallery %}
-    ## {{ album.album_name }}
+    <h2>{{ album.album }}</h2>
     <div class="album">
         {% for image in album.images %}
-            ![{{ image }}](/assets/gallery/{{ album.album_path }}{{ image }})
+            <img src="./assets/gallery/{{ album.album }}/{{ image }}" alt="{{ image }}">
         {% endfor %}
     </div>
 {% endfor %}
