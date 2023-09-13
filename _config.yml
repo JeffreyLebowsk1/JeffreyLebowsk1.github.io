@@ -10,3 +10,6 @@ github_username: JeffreyLebowsk1
 # theme: minima
 plugins:
   - jekyll-feed
+
+exclude:
+  - README.md
