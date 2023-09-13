@@ -51,6 +51,23 @@ img {
   vertical-align: middle;
 }
 
+/* Container holding the grid for each album */
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px; /* Spacing between albums */
+}
+
+/* Style for each thumbnail */
+.thumbnail {
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 5px; 
+}
+
 /**
  * Figures
  */
