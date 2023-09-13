@@ -1,22 +1,24 @@
-- album: art
-  images:
-    - 00002-masterpiece best quality SuperMario 1 2 holding a.png
-    - 00014-7.5-DPM++ 3M SDE Karras-juggernautXL_version2-1024x1024.png
-    - 00019-Super Mario.png
-    - 00022-Super Mario.png
-    - 00092-1127128228.png
-    - 00185-8-Euler a-juggernautXL_version2-1024x1024.png
-    - digital_pyramid.png
-- album: colorized
-  images:
-    - comfyui-cn-recolor_00012_.png
-    - comfyui-cn-recolor_00036_.png
-- album: my_model
-  images:
-    - 00058-add long brown hair realistic natural.png
-    - 00061-add long brown hair realistic natural.png
-- album: other
-  images:
-- album: photorealistic
-  images:
-    - 00034-mattdilworthrealtor man _ subject_ as The Big Lebowski.2023-08-24.png
+import os
+
+gallery_root = "./assets/gallery"  # path to your gallery root
+albums = []
+
+for foldername in os.listdir(gallery_root):
+    folder_path = os.path.join(gallery_root, foldername)
+    
+    # Check if it's a folder
+    if os.path.isdir(folder_path):
+        album = {"album": foldername, "images": []}
+        
+        for filename in os.listdir(folder_path):
+            if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.gif')):
+                album["images"].append(filename)
+        
+        albums.append(album)
+
+# Write to gallery.yml
+with open("_data/gallery.yml", "w") as outfile:
+    for album in albums:
+        outfile.write("- album: {}\n  images:\n".format(album["album"]))
+        for image in album["images"]:
+            outfile.write("    - {}\n".format(image))
