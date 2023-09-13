@@ -7,6 +7,6 @@ twitter_username: RealtorMattD
 github_username: JeffreyLebowsk1
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
