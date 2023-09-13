@@ -1,0 +1,3 @@
+title: Your Site's Title
+description: A brief description of your site.
+baseurl: ""  # If your repository is named `username.github.io`, leave this empty. For project pages, use "/repository-name".
