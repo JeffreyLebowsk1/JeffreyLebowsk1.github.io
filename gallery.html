@@ -12,7 +12,7 @@ title: Gallery
         <h2>{{ album.album }}</h2>
         <div class="album">
             {% for image in album.images %}
-                <img src="./assets/gallery/{{ album.album }}/{{ image }}" alt="{{ image }}" class="thumbnail">
+                <img src="./assets/gallery/{{ album.album }}/{{ image }}" class="thumbnail">
             {% endfor %}
         </div>
     </section>
