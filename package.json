@@ -1,0 +1,16 @@
+{
+  "name": "jeffreylebowsk1.github.io",
+  "version": "1.0.0",
+  "description": "---\r layout: default\r title: Home\r ---\r # JeffreyLebowsk1.github.io\r My Digital Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@tinacms/cli": "^1.5.29",
+    "tinacms": "^1.5.20"
+  }
+}
